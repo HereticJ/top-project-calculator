@@ -2,7 +2,7 @@
 let firstNum = "";
 let secondNum = "";
 let currentOperator = null;
-let resetDisplay = false;
+let shouldResetDisplay = false;
 
 const numberButtons = document.querySelectorAll("buttons");
 const operatorButtons = document.querySelectorAll("operators");
@@ -11,15 +11,38 @@ const clearButton = document.getElementById("button_clear");
 const deleteButton = document.getElementById("button_del");
 const decimalButton = document.getElementById("button_decimal");
 const lastOperationDisplay = document.getElementById("lastOperationDisplay");
-const currentOperationDisplay = document.getElementById("currentOperationDisplay")
+const currentOperationDisplay = document.getElementById("currentOperationDisplay");
 
-equalSign.addEventListener("click", operate);
+//equalSign.addEventListener("click", operate());
 
 numberButtons.forEach((button) => 
     button.addEventListener("click", () => appendNumber(button.textContent))
 );
 
-function appendNumber(number)
+operatorButtons.forEach((button) => 
+    button.addEventListener(`click`, () => 
+        setOperation(button.textContent)
+));
+
+function appendNumber(number) {
+    if (currentOperationDisplay.textcontent === `0` || shouldResetDisplay) {
+        resetDisplay()
+        currentOperationDisplay.textcontent += number
+    };
+};
+
+function resetDisplay() {
+    currentOperationDisplay.textContent = ``;
+    shouldResetDisplay = false;
+};
+
+function clear() {
+    currentOperationDisplay.textContent = `0`;
+    lastOperationDisplay.textContent = ``;
+    firstNum = ``;
+    secondNum = ``;
+    currentOperator = null;
+};
 
 // Adds two numbers
 const add = function(num1, num2) {
