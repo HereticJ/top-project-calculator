@@ -2,11 +2,49 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
         <title>TOP Project: Calculator</title>
     </head>
 
     <body>
         <h1>TOP Project: Calculator</h1>
+
+        <div class="display">
+            <div class="display-last" id="lastOperationDisplay"></div>
+            <div class="display-current" id="currentOperationDisplay"></div>
+        </div>
+
+        <div class="buttonContainer">
+            <div class="topRow">
+                <button class="buttons" id="button_clear">Clear</button>
+                <button class="buttons" id="button_del">Delete</button>
+            </div>
+            <div class ="row">
+                <button class="buttons" id="button_7" value="7">7</button>
+                <button class="buttons" id="button_8" value="8">8</button>
+                <button class="buttons" id="button_9" value="9">9</button>
+                <button class="operators" id="button_plus" value="+">+</button>
+            </div>
+            <div class ="row">
+                <button class="buttons" id="button_4" value="4">4</button>
+                <button class="buttons" id="button_5" value="5">5</button>
+                <button class="buttons" id="buttton_6" value="6">6</button>
+                <button class="operators" id="button_minus" value="-">-</button>
+            </div>
+            <div class ="row">
+                <button class="buttons" id="button_1" value="1">1</button>
+                <button class="buttons" id="button_2" value="2">2</button>
+                <button class="buttons" id="button_3" value="3">3</button>
+                <button class="operators" id="button_multiply" value="*">x</button>
+            </div>
+            <div class ="bottomRow">
+                <button class="buttons" id="button_decimal" value=".">.</button>
+                <button class="buttons" id="button_0" value="0">0</button>
+                <button class="operators" id="button_equal">=</button>
+                <button class="operators" id="button_divide" value="/">÷</button>
+            </div>
+        </div>
     </body>
 
 </html>
