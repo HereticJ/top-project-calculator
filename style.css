@@ -1,8 +1,24 @@
-.buttonContainer {
+.display {
+    padding: 6px;
+    margin: 9px;
+    margin-left: 8px;
+    width: 225px;
+    height: 30px;
+    font-size: 24px;
+    border: 2px solid black;
+    color: white;
+    text-align: right;
+    background: gray;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.calculatorButtons {
     height: 400px;
     width: 240px;
-    padding: 5px;
-    background: #ff06b5;
+    padding: 6px;
+    background: rgba(241, 247, 162, 0.856);
+    border-radius: 20px;
     border: 4px solid indigo;
     display: flex;
     flex-wrap: wrap;
@@ -11,11 +27,24 @@
     gap: 8px;
 }
 
+.calcFunc {
+    height: 50px;
+    width: 100px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .buttons {
     height: 50px;
     width: 50px;
     padding: 4px;
-    background-color: #f7baa1;
+    font-size: 24px;
+    background-color: #f5c6b4;
+    border-radius: 10px;
     border: 2px solid black;
     justify-content: center;
     align-items: center;
@@ -25,8 +54,34 @@
     height: 50px;
     width: 50px;
     padding: 4px;
-    font-size: 1.2rem;
-    background-color: #ffe28a;
+    font-size: 24px;
+    background-color: rgb(202, 255, 255);
+    color: #ff06b5;
+    border-radius: 10px;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+#button_equal {
+    height: 50px;
+    width: 100px;
+    padding: 4px;
+    font-size: 24px;
+    background-color: aqua;
+    color: red;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+
+#button_negate {
+    height: 50px;
+    width: 100px;
+    padding: 4px;
+    font-size: 24px;
+    background-color: aqua;
+    color: red;
     border: 2px solid black;
     justify-content: center;
     align-items: center;
@@ -34,58 +89,35 @@
 
 .topRow {
     display: flex;
-
     padding: 4px;
-    gap: 10px;
+    gap: 16px;
+}
+
+.topRow2 {
+    display: flex;
+    padding: 4px;
+    gap: 16px;
 }
 
 .bottomRow {
     display: flex;
     height: 50px;
-    width: 240px;
     padding: 4px;
-    gap: 10px;
+    gap: 4px;
 }
 
-#button_clear {
-    height: 50px;
-    width: 100px;
-    padding: 4px;
-    border: 2px solid black;
+#bottom_left {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-right: 54px;
+    padding-left: 8px;
 }
 
-#button_del {
+#bottom_right {
     height: 50px;
-    width: 80px;
-    padding: 4px;
-    border: 2px solid black;
-    display: flex;
+    width: 108px;
+    padding-bottom: 8px;
+    padding-right: 4px;
+    gap: 4px;
     justify-content: center;
-    align-items: center;
 }
 
-#operator {
-    height: 50px;
-    width: 50px;
-    padding: 4px;
-    border: 2px solid black;
-    justify-content: center;
-    align-items: center;
-}
-
-#lastOperationDisplay {
-    padding: 5px;
-    margin: 15px;
-    width: 220px;
-    text-align: right;
-}
-
-#currentOperationDisplay {
-    padding: 5px;
-    margin: 15px;
-    width: 220px;
-    text-align: right;
-}
